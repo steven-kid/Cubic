@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="http://i1.social.s-msft.com/Forums/GlobalResources/images/Msdn/favicon.ico"
+    type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    class="stylesheet">
+</head>
+
+<body>
+  <button id="theme">
+    <i class="bi bi-brightness-high-fill"></i>
+  </button>
+  <header>
+    <h2>Steven's Cubic</h2>
+    <div id="nav">
+      <div class="nav-container">
+        <p>Cubic</p>
+        <i class="bi bi-boxes"></i>
+      </div>
+      <div class="nav-container">
+        <p>Algorithm</p>
+        <i class="bi bi-bookmarks"></i>
+      </div>
+      <div class="nav-container">
+        <p>Igem</p>
+        <i class="bi bi-bar-chart"></i>
+      </div>
+    </div>
+  </header>
+  <div class="left-panel">
+    <h3>
+      Hi I'm steven 🤺<br>
+      Welcome to my Cubic
+    </h3>
+    <p>
+      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
+    </p>
+  </div>
+  <canvas id="canvas3d"></canvas>
+  <div class="main-content"></div>
+  <footer>
+    <h2>Steven's Cubic</h2>
+  </footer>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    });
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
