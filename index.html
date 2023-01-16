@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="http://i1.social.s-msft.com/Forums/GlobalResources/images/Msdn/favicon.ico"
+  <link rel="shortcut icon" href="./img/iGEM-logo-large.png"
     type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     class="stylesheet">
@@ -12,7 +12,10 @@
 
 <body>
   <button id="theme">
-    <i class="bi bi-brightness-high-fill"></i>
+    <i class="bi bi-brightness-high" id="theme-icon"></i>
+  </button>
+  <button id="menu">
+    <i class="bi bi-list" id="menu-icon"></i>
   </button>
   <header>
     <h2>Steven's Cubic</h2>
@@ -31,7 +34,8 @@
       </div>
     </div>
   </header>
-  <div class="left-panel">
+  <!-- animate-box animate__animated animate__fadeInUp -->
+  <div class="left-panel reveal fade-bottom">
     <h3>
       Hi I'm steven 🤺<br>
       Welcome to my Cubic
@@ -41,9 +45,46 @@
     </p>
   </div>
   <canvas id="canvas3d"></canvas>
+  <div class="left-panel reveal fade-bottom">
+    <h3>
+      Hi I'm steven 🤺<br>
+      Welcome to my Cubic
+    </h3>
+    <p>
+      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
+    </p>
+  </div>
+  <div class="left-panel reveal fade-bottom">
+    <h3>
+      Hi I'm steven 🤺<br>
+      Welcome to my Cubic
+    </h3>
+    <p>
+      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
+    </p>
+  </div>
+  <div class="left-panel reveal fade-bottom">
+    <h3>
+      Hi I'm steven 🤺<br>
+      Welcome to my Cubic
+    </h3>
+    <p>
+      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
+    </p>
+  </div>
   <div class="main-content"></div>
   <footer>
-    <h2>Steven's Cubic</h2>
+    <div class="footer-icon-container">
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-youtube"></i>
+    </div>
+    <h4>Steven's Cubic &copy; Steven 2023</h4>
+    <div class="footer-img-container">
+      <img src="./img/school-transparent.png" alt="">
+      <img src="./img/iGEM-logo-large.png" alt="">
+      <img src="./img/igem-team-transparent.png" alt="">
+    </div>
   </footer>
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
