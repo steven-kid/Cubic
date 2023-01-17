@@ -30,14 +30,34 @@
       <div class="nav-container">
         <p>Cubic</p>
         <i class="bi bi-boxes"></i>
+        <div class="selection-box" id="selection-box-1">
+          <a href="#" id="model-art">Art</a>
+          <a href="#" id="model-wizard">Wizard</a>
+        </div>
       </div>
       <div class="nav-container">
         <p>Algorithm</p>
         <i class="bi bi-bookmarks"></i>
+        <div class="selection-box" id="selection-box-2">
+          <a href="#">Graph</a>
+          <a href="#">DP</a>
+          <a href="#">Sort</a>
+          <a href="#">Math</a>
+          <a href="#">String</a>
+          <a href="#">Search</a>
+          <a href="#">Trick</a>
+        </div>
       </div>
       <div class="nav-container">
         <p>Igem</p>
         <i class="bi bi-bar-chart"></i>
+        <div class="selection-box" id="selection-box-3">
+          <a href="#">Project</a>
+          <a href="#">Wet</a>
+          <a href="#">Dry</a>
+          <a href="#">HP</a>
+          <a href="#">TEAM</a>
+        </div>
       </div>
     </div>
   </header>
@@ -71,7 +91,7 @@
     <a href="#table-section" id="next-page">
       <i class="bi bi-arrow-down"></i>
     </a>
-    <div class="panel reveal fade-bottom">
+    <div class="panel reveal fade-left">
       <h3>
         Show some formula here 🤺<br>
       </h3>
@@ -163,8 +183,8 @@
         </table>
       </div>
     </section>
-    
-    <div id="stat-table"></div>
+    <div class="reveal fade-bottom" id="stat-table1"></div>
+    <div class="reveal fade-bottom" id="stat-table2"></div>
     </div>
     <div class="panel reveal fade-bottom">
       <h3>
@@ -200,6 +220,7 @@
     });
   </script>
   <script type="module" src="main.js"></script>
+  <script type="module" src="echart.js"></script>
 </body>
 
 </html>

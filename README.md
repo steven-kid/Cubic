@@ -7,9 +7,13 @@ cd ./.../
 npm install
 启动
 npm run dev
+访问本地端口
+http://localhost:5174/
 ```
 
-主页面
+演示网址 [Demo](http://)
+
+主页面 默认跟随系统
 - 浅色模式
 - 深色模式
 
@@ -31,3 +35,7 @@ npm run dev
 图表 Echarts
 
 数学公式 Mathjax
+
+Todo 
+- header 下拉选项
+- 正文内容
