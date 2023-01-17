@@ -4,16 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./img/iGEM-logo-large.png"
-    type="image/x-icon" />
+  <link rel="shortcut icon" href="./img/iGEM-logo-large.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     class="stylesheet">
 </head>
 
 <body>
+  <div class="loading">Loading...</div>
   <button id="theme">
     <i class="bi bi-brightness-high" id="theme-icon"></i>
   </button>
+  <div class="menu">
+    <a href="#"><span>Products</span></a>
+    <a href="#"><span>Company</span></a>
+    <a href="#"><span>Safety</span></a>
+    <a href="#"><span>Help</span></a>
+    <i class="bi bi-x-circle"></i>
+  </div>
   <button id="menu">
     <i class="bi bi-list" id="menu-icon"></i>
   </button>
@@ -34,45 +41,143 @@
       </div>
     </div>
   </header>
-  <!-- animate-box animate__animated animate__fadeInUp -->
-  <div class="left-panel reveal fade-bottom">
-    <h3>
-      Hi I'm steven 🤺<br>
-      Welcome to my Cubic
-    </h3>
-    <p>
-      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
-    </p>
-  </div>
-  <canvas id="canvas3d"></canvas>
-  <div class="left-panel reveal fade-bottom">
-    <h3>
-      Hi I'm steven 🤺<br>
-      Welcome to my Cubic
-    </h3>
-    <p>
-      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
-    </p>
-  </div>
-  <div class="left-panel reveal fade-bottom">
-    <h3>
-      Hi I'm steven 🤺<br>
-      Welcome to my Cubic
-    </h3>
-    <p>
-      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
-    </p>
-  </div>
-  <div class="left-panel reveal fade-bottom">
-    <h3>
-      Hi I'm steven 🤺<br>
-      Welcome to my Cubic
-    </h3>
-    <p>
-      切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
-    </p>
-  </div>
-  <div class="main-content"></div>
+  <main>
+    <div class="panel info">
+      <h3>
+        Hi I'm steven 🤺<br>
+        Welcome to my Cubic
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet consecte
+        <br>
+        tur adipisicing elit. Voluptas delect
+        <br>
+        us maiores minus dolorum vitae rerum
+        <br>
+        porro sunt reprehenderit. Dignissimos adip
+        <br>
+        isci quae labore neque possimus, exceptur
+        <br>
+        i eos error rerum temporeveritatis.
+      </p>
+      <a href="https://github.com/steven-kid" class="regular-button">
+        <i class="bi bi-github"></i>
+        Github
+      </a>
+    </div>
+    <div class="panel">
+      <canvas id="canvas3d"></canvas>
+    </div>
+    <a href="#table-section" id="next-page">
+      <i class="bi bi-arrow-down"></i>
+    </a>
+    <div class="panel reveal fade-bottom">
+      <h3>
+        Show some formula here 🤺<br>
+      </h3>
+      <ul>
+        <li>
+          Equition $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
+        </li>
+        <li>
+          Algreba
+          $\left.\begin{matrix}
+          a \subset \beta ,b \subset \beta ,a \cap b=P \\
+          a \parallel \partial ,b \parallel \partial
+          \end{matrix}\right\}\Rightarrow \beta \parallel \alpha $
+        </li>
+        <li>
+          Matrix
+          $
+          \begin{vmatrix}
+          \mathbf{i}& \mathbf{j}& \mathbf{k} \\
+          \frac{\partial X}{\partial u}& \frac{\partial Y}{\partial u}& 0 \\
+          \frac{\partial X}{\partial v}& \frac{\partial Y}{\partial v}& 0 \\
+          \end{vmatrix} \alpha
+          $
+        </li>
+      </ul>
+    </div>
+    <div class="panel reveal fade-bottom">
+      <h3>
+        Show some statistic here🪄<br>
+        <p id="stat">8119</p>
+      </h3>
+    </div>
+    <section class="table-section" id="table-section">
+      <div class="reveal fade-bottom">
+        <h3>
+          It's a table here <br>
+          Sale among countries Table 🚩
+        </h3>
+        <table class="data-table" border="1">
+          <tr>
+            <th>Year</th>
+            <th>China</th>
+            <th>America</th>
+            <th>England</th>
+            <th>Canada</th>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td>3934</td>
+            <td>3081</td>
+            <td>3115</td>
+            <td><strong>5119</strong></td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td><strong>5090</strong></td>
+            <td>6326</td>
+            <td>1291</td>
+            <td>1291</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td><strong>5121</strong></td>
+            <td>7011</td>
+            <td>4823</td>
+            <td>4823</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td><strong>6543</strong></td>
+            <td>4888</td>
+            <td>9500</td>
+            <td>4845</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td><strong>7135</strong></td>
+            <td>1452</td>
+            <td>3202</td>
+            <td>3115</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td><strong>8119</strong></td>
+            <td>8824</td>
+            <td>4119</td>
+            <td>2167</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    
+    <div id="stat-table"></div>
+    </div>
+    <div class="panel reveal fade-bottom">
+      <h3>
+        Hi I'm steven 🤺<br>
+      </h3>
+      <p>
+        切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
+      </p>
+    </div>
+  </main>
+  <a href="#" id="first-page" class="hide">
+    <i class="bi bi-arrow-up"></i>
+  </a>
   <footer>
     <div class="footer-icon-container">
       <i class="bi bi-instagram"></i>
@@ -88,7 +193,7 @@
   </footer>
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+    </script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
