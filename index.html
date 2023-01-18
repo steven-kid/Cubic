@@ -10,7 +10,10 @@
 </head>
 
 <body>
-  <div class="loading">Loading...</div>
+  <div class="loading">
+    Loading...
+    <img id="load-gif" src="./public/load.gif" alt="">
+  </div>
   <button id="theme">
     <i class="bi bi-brightness-high" id="theme-icon"></i>
   </button>
@@ -39,24 +42,24 @@
         <p>Algorithm</p>
         <i class="bi bi-bookmarks"></i>
         <div class="selection-box" id="selection-box-2">
-          <a href="#">Graph</a>
-          <a href="#">DP</a>
-          <a href="#">Sort</a>
-          <a href="#">Math</a>
-          <a href="#">String</a>
-          <a href="#">Search</a>
-          <a href="#">Trick</a>
+          <a href="#algorithm">Graph</a>
+          <a href="#algorithm">DP</a>
+          <a href="#algorithm">Sort</a>
+          <a href="#algorithm">Math</a>
+          <a href="#algorithm">String</a>
+          <a href="#algorithm">Search</a>
+          <a href="#algorithm">Trick</a>
         </div>
       </div>
       <div class="nav-container">
         <p>Igem</p>
         <i class="bi bi-bar-chart"></i>
         <div class="selection-box" id="selection-box-3">
-          <a href="#">Project</a>
-          <a href="#">Wet</a>
-          <a href="#">Dry</a>
-          <a href="#">HP</a>
-          <a href="#">TEAM</a>
+          <a href="#igem">Project</a>
+          <a href="#igem">Wet</a>
+          <a href="#igem">Dry</a>
+          <a href="#igem">HP</a>
+          <a href="#igem">TEAM</a>
         </div>
       </div>
     </div>
@@ -67,19 +70,14 @@
         Hi I'm steven 🤺<br>
         Welcome to my Cubic
       </h3>
-      <p>
-        Lorem ipsum dolor sit amet consecte
-        <br>
-        tur adipisicing elit. Voluptas delect
-        <br>
-        us maiores minus dolorum vitae rerum
-        <br>
-        porro sunt reprehenderit. Dignissimos adip
-        <br>
-        isci quae labore neque possimus, exceptur
-        <br>
-        i eos error rerum temporeveritatis.
-      </p>
+      <div class="p-container">
+        <p>
+          Most of us compare ourselves with anyone we think is happier — a relative, someone we know a lot, or someone we hardly know. 
+        </p>
+        <p>
+          As a result, what we do remember is anything that makes others happy, anything that makes ourselves unhappy, totally forgetting that there is something happy in our own life.
+        </p>
+      </div>
       <a href="https://github.com/steven-kid" class="regular-button">
         <i class="bi bi-github"></i>
         Github
@@ -116,13 +114,22 @@
           \end{vmatrix} \alpha
           $
         </li>
+        <li>
+          Calculas
+          $
+          f(x) = \int_{-\infty}^\infty \hat f(x)\xi\,e^{2 \pi i \xi x} \,\mathrm{d}\xi
+          $
+        </li>
       </ul>
     </div>
     <div class="panel reveal fade-bottom">
       <h3>
-        Show some statistic here🪄<br>
-        <p id="stat">8119</p>
+        Try to show some statistic to you here🪄<br>
+        <p id="stat-1">182,313</p>
+        <p style="display: inline-block">docs📄</p> <br>
       </h3>
+      <h2>We luckily grow fast and reach <br>The milestone 🚩 of <p id="stat-2">182,313</p> users</h2>
+      <h2>Thank you all for the participation!</h2>
     </div>
     <section class="table-section" id="table-section">
       <div class="reveal fade-bottom">
@@ -183,17 +190,189 @@
         </table>
       </div>
     </section>
-    <div class="reveal fade-bottom" id="stat-table1"></div>
+    <div class="reveal fade-bottom stat-table" id="stat-table1"></div>
     <div class="reveal fade-bottom" id="stat-table2"></div>
     </div>
-    <div class="panel reveal fade-bottom">
-      <h3>
-        Hi I'm steven 🤺<br>
-      </h3>
-      <p>
-        切比雪夫不等式 $P\{|X-E(X)| \geq \varepsilon\} \leq \frac{\sigma^{2}}{\varepsilon^{2}}$
-      </p>
-    </div>
+    <section class="main-content reveal fade-bottom">
+      <div class="content-box" id="algorithm">
+        <div class="team-logo" class="reveal fade-bottom">
+          <img src="./img/team-logo.png" alt="">
+        </div>
+        <h2 class="reveal fade-bottom" >Interactive Logo!</h2>
+        <h3 class="reveal fade-bottom">
+          What is an Algorithm? Algorithm Basics
+        </h3>
+        <p class="reveal fade-bottom">
+          The word Algorithm means ” A set of finite rules or instructions to be followed in calculations or other
+          problem-solving operations ” Or ” A procedure for solving a mathematical problem in a finite number of steps
+          that frequently involves recursive operations”.
+        </p>
+        <p class="reveal fade-bottom">
+          Therefore Algorithm refers to a sequence of finite steps to solve a particular problem.
+          Algorithms can be simple and complex depending on what you want to achieve.
+        </p>
+        <img src="./img/What-is-Algorithm.jpg" class="reveal fade-bottom" alt="">
+        <p class="reveal fade-bottom">
+          It can be understood by taking the example of cooking a new recipe. To cook a new recipe, one reads the
+          instructions and steps and executes them one by one, in the given sequence. The result thus obtained is the
+          new dish is cooked perfectly. Every time you use your phone, computer, laptop, or calculator you are using
+          Algorithms. Similarly, algorithms help to do a task in programming to get the expected output.
+
+          The Algorithm designed are language-independent, i.e. they are just plain instructions that can be implemented
+          in any language, and yet the output will be the same, as expected.
+        </p>
+        <h3 class="reveal fade-bottom">What is Dynamic Programming?</h3>
+        <p class="reveal fade-bottom"> 
+          Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that
+          has repeated calls for same inputs, we can optimize it using Dynamic Programming. The idea is to simply store
+          the results of subproblems, so that we do not have to re-compute them when needed later. This simple
+          optimization reduces time complexities from exponential to polynomial.
+        </p>
+        <p class="reveal fade-bottom"> For example, if we write simple recursive solution for Fibonacci Numbers, we get exponential time
+          complexity and if we optimize it by storing solutions of subproblems, time complexity reduces to linear.
+        </p>
+        <h3 class="reveal fade-bottom">What is igem?(Internationally Genetically Engineered Machine)</h3>
+        <p class="reveal fade-bottom">iGEM is an academic competition aimed at improving peoples’ understanding of synthetic biology while also
+          developing an open community and collaboration between groups. It is the most renowned Synthetic Biology
+          competition for students. The competition began in 2004 and now has over 300 teams competing from locations
+          around the world. The various teams all aim to design and engineer a new method of improving using synthetic
+          biology. Projects range from improving the environment to producing new medicines or materials to colonizing
+          other planets.</p>
+        <h3 class="reveal fade-bottom">
+          What is Wiki?
+        </h3>
+        <p class="reveal fade-bottom">
+          A wiki is a website that allows the site visitors to add and edit content. Generally, site visitors use their
+          browser to edit text without requiring HTML code. Additionally, some Wikis allow adding and editing of
+          graphics, tables and interactive components.
+
+          The term wiki may also simply refer to the software used to create such a Web site.
+
+          A blog site, by contrast, does allow visitors to add content, but does not usually allow them to change or
+          edit previous comments from others
+        </p>
+        <h3 class="reveal fade-bottom">
+          The 2022 iGEM Competition is now over
+        </h3>
+        <p class="reveal fade-bottom">
+          2022 was a milestone year, culminating with the first in-person gathering for the iGEM Grand Jamboree in
+          Paris, a major undertaking that was nearly 4 years in the making. An international panel of 370 judges cast
+          their votes to select the winning teams, and the results were impressive – with 173 teams earning gold medals,
+          94 teams earning silver, and 57 teams earning bronze. Congratulations to ALL teams! See the results.
+        </p>
+        <h3 class="reveal fade-bottom">
+          Team wikis are thawed
+        </h3>
+        <p class="reveal fade-bottom" id="igem">
+          Take this time to edit and update your wiki with final results from the Giant Jamboree, or to fix any
+          mistakes. Wikis will be permanently archived on December 16, so please take an extra moment to review that
+          your personal information and photographs.
+        </p>
+        <h3 class="reveal fade-bottom" id="igem">
+          The iGEM Cycle: How to Navigate the iGEM Competition
+        </h3>
+        <p class="reveal fade-bottom">
+          The natural world is filled with cycles … the carbon cycle, the cell cycle, the cycling of the seasons … to
+          name a few. A cycle is also apparent in the iGEM Competition, where teams work with nature in engineering
+          biology to solve local problems and tackle global challenges.
+        </p>
+        <p class="reveal fade-bottom">
+          Starting an iGEM team and getting a project started in the iGEM Competition can be a challenge, even for
+          returning teams. We have prepared this guide to help you understand what to expect throughout the iGEM
+          Competition Cycle, whether this is your first time participating, or you are returning as a seasoned veteran.
+        </p>
+        <img src="./img/iGEM_Cycle_2023.png" class="reveal fade-bottom" alt="">
+        <h3 class="reveal fade-bottom">
+          OFF SEASON PHASE (DECEMBER-JANUARY)
+        </h3>
+        <p class="reveal fade-bottom">
+          During the competition season, there are 3 active phases in the iGEM cycle. While not all teams follow this
+          cycle (for example, you may want to start work earlier or later than shown here, or you are working on a
+          software project without a wet lab component), the major tasks within the 3 active phases of the competition
+          season include:
+        </p>
+        <h3 class="reveal fade-bottom">
+          PHASE 1 (FEBRUARY-MAY)
+        </h3>
+        <p class="reveal fade-bottom">
+          1. Start a Team
+          <br>
+          Decide the final team from the group of interested students.
+        </p>
+        <p class="reveal fade-bottom">
+          2.Brainstorm Project Ideas
+          <br>
+          Ideally, iGEM projects are entirely conceived, led and driven by students. Many teams will have multiple
+          brainstorming sessions, sometimes with and sometimes without the team instructors.
+        </p>
+        <p class="reveal fade-bottom">
+          3.Determine Team Goals and Tasks
+          <br>
+
+          This can be challenging, but well worth the effort in the end. A list of high level goals and a detailed list
+          of tasks needed to reach those goals will help your team stay focused on the project.
+        </p>
+        <p class="reveal fade-bottom">
+          4.Read the Competition Requirements
+          <br>
+          Make sure that your team has covered all aspects of the requirements, deliverables, and deadlines, as some
+          aspects may be very important to know before starting to plan your project. This should be the responsibility
+          of the entire team and not the sole responsibility of one team member.
+        </p>
+        <h3 class="reveal fade-bottom">
+          PHASE 2 (JUNE, JULY, AUGUST)
+        </h3>
+        <p class="reveal fade-bottom">
+          1.Start Work on Project
+          <br>
+        </p>
+        <p class="reveal fade-bottom">
+          For wet lab work, you should get trained in protocols and follow your school's safety regulations, and start working on your project. You must also follow iGEM’s safety rules and policies throughout your project.
+          2.Build Your Designs
+          <br>
+          Order your DNA, and assemble your genetic devices and systems.
+        </p>
+        <p class="reveal fade-bottom">
+          3.Run Functional Experiments and/or Models
+          <br>
+          This can be done throughout the cloning process once you have a functional device. Test your device and collect your data.
+        </p>
+        <p class="reveal fade-bottom">
+          4.Process and Plot Your Results
+          <br>
+          Determine which software you need to use to process your data, determine the units you want to display, and make sure you include your controls during data analysis and show them on your graphs/plots.
+        </p>
+        <p class="reveal fade-bottom">
+          5.Work on your Team Wiki and Registry Part pages
+          <br>
+          Good project documentation is essential for communicating your project to the world. You should be continually working on your Team Wiki and Registry Part pages throughout the project. Don't wait until the last minute!
+        </p>
+        <h3 class="reveal fade-bottom">
+          PHASE 3 (SEPTEMBER, OCTOBER, NOVEMBER)
+        </h3>
+        <p class="reveal fade-bottom">
+          1.Create Materials to Showcase Your Project
+          <br>
+          Once you have your final data plotted and ready to show, you should create materials to showcase your project at the Jamboree. 
+        </p>
+        <p class="reveal fade-bottom">
+          2.Finalize Your Project Documentation
+          <br>
+          Now is the time to finalize your documentation, including Team Wiki, Registry Part Pages, and Judging Form.
+        </p>
+        <p class="reveal fade-bottom">
+          3.Prepare and Practice Your Presentation
+          <br>
+          Similar to your Team Wiki, you should work on your presentation all throughout the project. Practice your presentation in front of a live audience to develop your presentation skills, and integrate feedback to refine the content.
+        </p>
+        <p class="reveal fade-bottom">
+          4.Attend the Grand Jamboree in Paris
+          <br>
+          Meet other iGEM teams, celebrate your work, and have fun!
+        </p>
+      </div>
+
+    </section>
   </main>
   <a href="#" id="first-page" class="hide">
     <i class="bi bi-arrow-up"></i>

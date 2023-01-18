@@ -39,7 +39,7 @@ const colors = {
     strongColor: "#D85F04",
     tableFontColor: "#000",
     tableHoverColor: "#e0e0e0",
-    themeBtnHoverColor: '#5e504c'
+    themeBtnHoverColor: "#5e504c",
   },
   art: {
     headerColor: "#db91a0",
@@ -51,7 +51,7 @@ const colors = {
     strongColor: "#B2EDCE",
     tableFontColor: "#6d85b3",
     tableHoverColor: "#e0e0e0",
-    themeBtnHoverColor: '#c98593'
+    themeBtnHoverColor: "#c98593",
   },
 };
 
@@ -70,8 +70,10 @@ const theme = document.querySelector("#theme");
 const themeIcon = document.querySelector("#theme-icon");
 const app = new Application(canvas);
 const menu = document.querySelector("#menu");
-const modelArtBtn = document.querySelector('#model-art');
-const modelWizardBtn = document.querySelector('#model-wizard');
+const modelArtBtn = document.querySelector("#model-art");
+const modelWizardBtn = document.querySelector("#model-wizard");
+const loading = document.querySelector(".loading");
+const teamLogo = document.querySelector(".team-logo");
 let firstPageBtn = document.querySelector("#first-page");
 let nextPageBtn = document.querySelector("#next-page");
 
@@ -119,42 +121,62 @@ function switchProperty() {
 }
 
 function load(model) {
+  loading.innerHTML = 'Loading...<img id="load-gif" src="./public/load.gif">';
+  setTimeout(() => {
+    loading.innerHTML =
+      'Loading Model...<img id="load-gif" src="./public/load.gif">';
+  }, 600);
+
   setTimeout(() => {
     app.load(`/${model}.splinecode`).then(() => {
       // gsap.to(".loading", { duration: 1, display: "none", ease: "power2"});
-      const tween = gsap.timeline({delay: 0.8});
+      const tween = gsap.timeline({ delay: 0.8 });
       // loading
-      tween.to(".loading", {duration: 0.5, display: "none", ease: "power2"});
+      tween.to(".loading", { duration: 0.5, display: "none", ease: "power2" });
       // header
-      tween.from("header", {duration: 0.5, ease: "power2", y: -16*6});
-      tween.to("header", {duration: 0, y: 0, transition: 0.3});
+      tween.from("header", { duration: 0.5, ease: "power2", y: -16 * 6 });
+      tween.to("header", { duration: 0, y: 0, transition: 0.3 });
       // aside
-      tween.from(".info", {duration: 0.5, ease: "power2", opacity: 0, x: -50, y: 50});
-      tween.from("#canvas3d", {duration: 1.5, ease: "power2", opacity: 0, x: 80});
-    }); 
+      tween.from(".info", {
+        duration: 0.5,
+        ease: "power2",
+        opacity: 0,
+        x: -50,
+        y: 50,
+      });
+      tween.from("#canvas3d", {
+        duration: 1.5,
+        ease: "power2",
+        opacity: 0,
+        x: 80,
+      });
+    });
   }, 500);
 }
 
 // follow system theme
-if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
   load(model);
 } else {
   switchTheme();
 }
 
-modelArtBtn.addEventListener('click', () => {
-  if(model !== 'art'){
+modelArtBtn.addEventListener("click", () => {
+  if (model !== "art") {
     switchTheme();
   }
-})
+});
 
-modelWizardBtn.addEventListener('click', () => {
-  if(model !== 'wizard'){
+modelWizardBtn.addEventListener("click", () => {
+  if (model !== "wizard") {
     switchTheme();
   }
-})
+});
 
-function switchTheme(){
+function switchTheme() {
   let oldModel = model;
   model = model === "wizard" ? "art" : "wizard";
   gsap.fromTo(
@@ -170,7 +192,7 @@ function switchTheme(){
       display: "flex",
       ease: "power2",
     }
-    );
+  );
   switchProperty();
   load(model);
 }
@@ -211,15 +233,25 @@ function reveal() {
       reveals[i].classList.remove("active");
     }
   }
-  // show stats on load
-  let stats = document.querySelector("#stat");
-  let statsTop = stats.getBoundingClientRect().top;
+  // show stats-1 on load
+  let stats1 = document.querySelector("#stat-1");
+  let statsTop1 = stats1.getBoundingClientRect().top;
   if (
-    statsTop < windowHeight - elementVisible &&
-    statsTop > windowHeight - 2 * elementVisible
+    statsTop1 < windowHeight - elementVisible &&
+    statsTop1 > windowHeight - 3 * elementVisible
   ) {
-    let countUp = new CountUp("stat", 8119);
-    countUp.start();
+    console.log(stats1);
+    let countUp1 = new CountUp(stats1, 182313);
+    countUp1.start();
+  }
+  let stats2 = document.querySelector("#stat-2");
+  let statsTop2 = stats2.getBoundingClientRect().top;
+  if (
+    statsTop2 < windowHeight - elementVisible &&
+    statsTop2 > windowHeight - 3 * elementVisible
+  ) {
+    let countUp2 = new CountUp(stats2, 8119);
+    countUp2.start();
   }
   // show and hide next-pade btn
   let nextPageBtn = document.querySelector("#next-page");
@@ -243,11 +275,6 @@ function reveal() {
 firstPageBtn.addEventListener("click", () =>
   nextPageBtn.classList.remove("hide")
 );
-
-// if( <= 70)
-// {
-//   header.style.backgroundColor = colors[model].headerColor;
-// }
 
 window.addEventListener("scroll", throttle(reveal, 100));
 reveal();
@@ -295,28 +322,75 @@ function scrollFunc() {
 
 // mobile menu
 const menuBtn = document.querySelector("#menu");
-menuBtn.addEventListener('click', ()=>{
-  window.scrollTo(0,0);
-  document.querySelector('body').style.overflow = 'hidden';
-  const tween = gsap.timeline({delay: 0.5});
-  menuBtn.style.display = 'none';
-  themeIcon.style.display = 'none';
-  nextPageBtn.style.display = 'none';
-  tween.from("header", {duration: 0, y: 0, transition: 0.3});
-  tween.to("header", {duration: 0.5, ease: "power2", y: -16*6});
-  tween.fromTo(".menu", {y:-window.innerHeight, opacity:0, display:"none"}, {duration:0.3, ease: "power2", opacity: 1, x: 0, y: 0, display: 'flex'})
-
-})
+menuBtn.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+  document.querySelector("body").style.overflow = "hidden";
+  const tween = gsap.timeline({ delay: 0.5 });
+  menuBtn.style.display = "none";
+  themeIcon.style.display = "none";
+  nextPageBtn.style.display = "none";
+  tween.from("header", { duration: 0, y: 0, transition: 0.3 });
+  tween.to("header", { duration: 0.5, ease: "power2", y: -16 * 6 });
+  tween.fromTo(
+    ".menu",
+    { y: -window.innerHeight, opacity: 0, display: "none" },
+    { duration: 0.3, ease: "power2", opacity: 1, x: 0, y: 0, display: "flex" }
+  );
+});
 
 const menuIcon = document.querySelector(".menu i");
-menuIcon.addEventListener('click', () => {
-  document.querySelector('body').style.overflow = '';
-  const tween = gsap.timeline()
-  tween.from("header", {duration: 0.5, ease: "power2", y: -16*6});
-  tween.to("header", {duration: 0, y: 0, transition: 0.3});
-  menuBtn.style.display = 'flex';
-  themeIcon.style.display = 'flex';
-  nextPageBtn.style.display = 'flex';
-  tween.to('.menu', {duration: 0.3, y: 30});
-  tween.to('.menu', {duration: 1, y: -window.innerHeight, opacity: 0, display: "none"});
-})
+menuIcon.addEventListener("click", () => {
+  document.querySelector("body").style.overflow = "";
+  const tween = gsap.timeline();
+  tween.from("header", { duration: 0.5, ease: "power2", y: -16 * 6 });
+  tween.to("header", { duration: 0, y: 0, transition: 0.3 });
+  menuBtn.style.display = "flex";
+  themeIcon.style.display = "flex";
+  nextPageBtn.style.display = "flex";
+  tween.to(".menu", { duration: 0.3, y: 30 });
+  tween.to(".menu", {
+    duration: 1,
+    y: -window.innerHeight,
+    opacity: 0,
+    display: "none",
+  });
+});
+
+// hover header bug fix
+const hoverHeader = (e) => {
+  if (e.clientY <= 90) {
+    header.style.backgroundColor = colors[model].headerColor;
+  } else {
+    header.style.backgroundColor = colors[model].backgroundColor;
+  }
+};
+window.onmousemove = throttle(hoverHeader, 1000);
+
+// team logo move as mouse move
+const domCenter = [
+  teamLogo.getBoundingClientRect().left +
+    teamLogo.getBoundingClientRect().width / 2,
+  teamLogo.getBoundingClientRect().top +
+    teamLogo.getBoundingClientRect().height / 2,
+];
+function followLogo(e){
+  const domCenter = [
+    teamLogo.getBoundingClientRect().left +
+      teamLogo.getBoundingClientRect().width / 2,
+    teamLogo.getBoundingClientRect().top +
+      teamLogo.getBoundingClientRect().height / 2,
+  ];
+  let mouseCenter = [e.clientX, e.clientY];
+  let delta = [domCenter[0] - mouseCenter[0], domCenter[1] - mouseCenter[1]];
+  for (let i = 0;  i <= 1; i ++){
+    if(delta[i] > 0) delta[i] = Math.min(delta[i], 100);
+    else delta[i] = Math.max(delta[i], -100);
+  }
+  teamLogo.style.transform = 'translateX(' + delta[0] * 0.3 + 'px) translateY(' + delta[1] * 0.3 + 'px)';
+  // transform: translateX(10px) translateY(10px);
+  console.log(domCenter, mouseCenter);
+  console.log(delta);
+};
+window.onmousemove = throttle(followLogo, 50);
+
+
