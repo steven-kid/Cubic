@@ -124,7 +124,7 @@ function load(model) {
   loading.innerHTML = 'Loading...';
   setTimeout(() => {
     loading.innerHTML =
-      'Loading Model..。';
+      'Loading Model...';
   }, 600);
 
   setTimeout(() => {
