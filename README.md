@@ -37,5 +37,4 @@ http://localhost:5174/
 数学公式 Mathjax
 
 Todo 
-- header 下拉选项
 - 正文内容

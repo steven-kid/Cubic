@@ -418,7 +418,7 @@ table tbody tr td:first-child {
 
 footer {
   width: 100%;
-  background-color: var(--header-color);
+  background-color: var(--theme-btn-hover-color);
   height: 10vh;
   display: flex;
   justify-content: space-between;
