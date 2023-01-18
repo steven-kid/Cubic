@@ -121,10 +121,10 @@ function switchProperty() {
 }
 
 function load(model) {
-  loading.innerHTML = 'Loading...';
+  loading.innerHTML = 'Loading...<img id="load-gif" src="./img/load.gif" alt="">';
   setTimeout(() => {
     loading.innerHTML =
-      'Loading Model...';
+    'Loading Model...<img id="load-gif" src="./img/load.gif" alt="">';
   }, 600);
 
   setTimeout(() => {
